@@ -1,0 +1,9 @@
+exports.team = {
+  '00:00:00:00:00:00': {
+    'name': 'nickname',
+    'greeting': ' has entered the building',
+    'time'  : null // this should be null
+  }
+};
+
+exports.timeTreshold = 5 * 60 // seconds
