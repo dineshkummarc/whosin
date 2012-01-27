@@ -38,12 +38,6 @@ pcap_session.on('packet', function (raw_packet) {
  }
 
  var notifyFlower = function(msg){
-   var options = {
-    host: 'localhost',
-    port: 6000,
-    path: 'say/'
-  };
-
   var client = net.createConnection(6000);
     client.addListener('connect', function(){client.write(msg)});
  }
