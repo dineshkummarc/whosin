@@ -25,7 +25,7 @@ pcap_session.on('packet', function (raw_packet) {
     var matched = printed_packet.match(pattern);
     var hwaddr = matched[matched.length - 1]
     if (team[hwaddr]) {
-      if (team[hwaddr].time == undefined || (secondsSinceLast(team[hwaddr].time) > timeTreshold) ){
+      if (team[hwaddr].time == undefined || team[hwaddr].time == null || (secondsSinceLast(team[hwaddr].time) > timeTreshold) ){
         notifyFlower(team[hwaddr].name + team[hwaddr].greeting )
       }
      team[hwaddr].time = new Date().getTime();
